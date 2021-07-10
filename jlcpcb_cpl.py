@@ -7,6 +7,9 @@ import csv
 pcbnew action plugin to export component placement list according to JLCPCB format.
 SMT and Through-Hole will be contained in the file.
 
+WARNING: Axis origin seems not to match and had to be manually corrected after ordering,
+check before using next time
+
 
 Windows 7/Windows 10:
 Install the plugins in: %APPDATA%\kicad\scripting\plugins
