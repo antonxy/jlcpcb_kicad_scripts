@@ -37,7 +37,7 @@ except IOError:
 out = csv.writer(f, lineterminator='\n', delimiter=',', quotechar='\"', quoting=csv.QUOTE_ALL)
 
 # Output a set of rows for a header providing general information
-out.writerow(['Comment', 'Designator', 'Footprint', 'LCSC Part #'])
+out.writerow(['Comment', 'Designator', 'Footprint', 'JLCPCB Part #'])
 
 # Get all of the components in groups of matching parts + values
 # (see ky_generic_netlist_reader.py)
@@ -54,6 +54,6 @@ for group in grouped:
         c = component
 
     # Fill in the component groups common data
-    out.writerow([c.getValue(), refs, c.getFootprint(), c.getField("LCSC")])
+    out.writerow([c.getValue(), refs, c.getFootprint(), c.getField("JLC")])
 
 
